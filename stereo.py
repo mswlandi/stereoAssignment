@@ -194,54 +194,66 @@ fig.savefig('dispSSDfull.png')
 in1 = cv2.imread('im2.png')
 in2 = cv2.imread('im6.png')
 
-disparityLAB11 = disparityMap(in1, in2, 1, distanceType="LAB")
-plt.imsave('dispSSD1x1_LAB.png', disparityLAB11)
-plt.imsave('dispSSD1x1_LAB_Comparison.png', appendImages(disparity11, disparityLAB11))
+# disparityLAB11 = disparityMap(in1, in2, 1, distanceType="LAB")
+# plt.imsave('dispSSD1x1_LAB.png', disparityLAB11)
+# plt.imsave('dispSSD1x1_LAB_Comparison.png', appendImages(disparity11, disparityLAB11))
 
-disparityLAB33 = disparityMap(in1, in2, 3, distanceType="LAB")
-plt.imsave('dispSSD3x3_LAB.png', disparityLAB33)
-plt.imsave('dispSSD3x3_LAB_Comparison.png', appendImages(disparity33, disparityLAB33))
+# disparityLAB33 = disparityMap(in1, in2, 3, distanceType="LAB")
+# plt.imsave('dispSSD3x3_LAB.png', disparityLAB33)
+# plt.imsave('dispSSD3x3_LAB_Comparison.png', appendImages(disparity33, disparityLAB33))
 
-disparityLAB55 = disparityMap(in1, in2, 5, distanceType="LAB")
-plt.imsave('dispSSD5x5_LAB.png', disparityLAB55)
-plt.imsave('dispSSD5x5_LAB_Comparison.png', appendImages(disparity55, disparityLAB55))
+# disparityLAB55 = disparityMap(in1, in2, 5, distanceType="LAB")
+# plt.imsave('dispSSD5x5_LAB.png', disparityLAB55)
+# plt.imsave('dispSSD5x5_LAB_Comparison.png', appendImages(disparity55, disparityLAB55))
 
-disparityLAB1111 = disparityMap(in1, in2, 11, distanceType="LAB")
-plt.imsave('dispSSD11x11_LAB.png', disparityLAB1111)
-plt.imsave('dispSSD11x11_LAB_Comparison.png', appendImages(disparity1111, disparityLAB1111))
+# disparityLAB1111 = disparityMap(in1, in2, 11, distanceType="LAB")
+# plt.imsave('dispSSD11x11_LAB.png', disparityLAB1111)
+# plt.imsave('dispSSD11x11_LAB_Comparison.png', appendImages(disparity1111, disparityLAB1111))
 
-# Gera imagens para o exercício 2
-# Imagens com filtro de média
-disparityMeanAgg11 = disparityMapAggregation(in1, in2, 1, 3, distanceType="SSD", aggregationType="mean")
-plt.imsave('dispMeanAgg1x1_Agg.png', disparityMeanAgg11)
-plt.imsave('dispMeanAgg1x1_Agg_Comparison.png', appendImages(disparity11, disparityMeanAgg11))
+# # Gera imagens para o exercício 2
+# # Imagens com filtro de média
+# disparityMeanAgg11 = disparityMapAggregation(in1, in2, 1, 3, distanceType="SSD", aggregationType="mean")
+# plt.imsave('dispMeanAgg1x1_Agg.png', disparityMeanAgg11)
+# plt.imsave('dispMeanAgg1x1_Agg_Comparison.png', appendImages(disparity11, disparityMeanAgg11))
 
-disparityMeanAgg33 = disparityMapAggregation(in1, in2, 3, 3, distanceType="SSD", aggregationType="mean")
-plt.imsave('dispMeanAgg3x3_Agg.png', disparityMeanAgg33)
-plt.imsave('dispMeanAgg3x3_Agg_Comparison.png', appendImages(disparity33, disparityMeanAgg33))
+# disparityMeanAgg33 = disparityMapAggregation(in1, in2, 3, 3, distanceType="SSD", aggregationType="mean")
+# plt.imsave('dispMeanAgg3x3_Agg.png', disparityMeanAgg33)
+# plt.imsave('dispMeanAgg3x3_Agg_Comparison.png', appendImages(disparity33, disparityMeanAgg33))
 
-disparityMeanAgg55 = disparityMapAggregation(in1, in2, 5, 3, distanceType="SSD", aggregationType="mean")
-plt.imsave('dispMeanAgg5x5_Agg.png', disparityMeanAgg55)
-plt.imsave('dispMeanAgg5x5_Agg_Comparison.png', appendImages(disparity55, disparityMeanAgg55))
+# disparityMeanAgg55 = disparityMapAggregation(in1, in2, 5, 3, distanceType="SSD", aggregationType="mean")
+# plt.imsave('dispMeanAgg5x5_Agg.png', disparityMeanAgg55)
+# plt.imsave('dispMeanAgg5x5_Agg_Comparison.png', appendImages(disparity55, disparityMeanAgg55))
 
-disparityMeanAgg1111 = disparityMapAggregation(
-    in1, in2, 11, 3, distanceType="SSD", aggregationType="mean")
-plt.imsave('dispMeanAgg11x11_Agg.png', disparityMeanAgg1111)
-plt.imsave('dispMeanAgg11x11_Agg_Comparison.png', appendImages(disparity1111, disparityMeanAgg1111))
+# disparityMeanAgg1111 = disparityMapAggregation(in1, in2, 11, 3, distanceType="SSD", aggregationType="mean")
+# plt.imsave('dispMeanAgg11x11_Agg.png', disparityMeanAgg1111)
+# plt.imsave('dispMeanAgg11x11_Agg_Comparison.png', appendImages(disparity1111, disparityMeanAgg1111))
 
-# Imagens com filtro de mediana
-disparityMedianAgg11 = disparityMapAggregation(in1, in2, 1, 3, distanceType="SSD", aggregationType="median")
-plt.imsave('dispMedianAgg1x1_Agg.png', disparityMedianAgg11)
-plt.imsave('dispMedianAgg1x1_Agg_Comparison.png', appendImages(disparity11, disparityMedianAgg11))
+# # Imagens com filtro de mediana
+# disparityMedianAgg11 = disparityMapAggregation(in1, in2, 1, 3, distanceType="SSD", aggregationType="median")
+# plt.imsave('dispMedianAgg1x1_Agg.png', disparityMedianAgg11)
+# plt.imsave('dispMedianAgg1x1_Agg_Comparison.png', appendImages(disparity11, disparityMedianAgg11))
 
-disparityMedianAgg33 = disparityMapAggregation(in1, in2, 3, 3, distanceType="SSD", aggregationType="median")
-plt.imsave('dispMedianAgg3x3_Agg.png', disparityMedianAgg33)
-plt.imsave('dispMedianAgg3x3_Agg_Comparison.png', appendImages(disparity33, disparityMedianAgg33))
+# disparityMedianAgg33 = disparityMapAggregation(in1, in2, 3, 3, distanceType="SSD", aggregationType="median")
+# plt.imsave('dispMedianAgg3x3_Agg.png', disparityMedianAgg33)
+# plt.imsave('dispMedianAgg3x3_Agg_Comparison.png', appendImages(disparity33, disparityMedianAgg33))
 
-disparityMedianAgg55 = disparityMapAggregation(in1, in2, 5, 3, distanceType="SSD", aggregationType="median")
-plt.imsave('dispMedianAgg5x5_Agg.png', disparityMedianAgg55)
-plt.imsave('dispMedianAgg5x5_Agg_Comparison.png', appendImages(disparity55, disparityMedianAgg55))
+# disparityMedianAgg55 = disparityMapAggregation(in1, in2, 5, 3, distanceType="SSD", aggregationType="median")
+# plt.imsave('dispMedianAgg5x5_Agg.png', disparityMedianAgg55)
+# plt.imsave('dispMedianAgg5x5_Agg_Comparison.png', appendImages(disparity55, disparityMedianAgg55))
 
-disparityMedianAgg1111 = disparityMapAggregation(in1, in2, 11, 3, distanceType="SSD", aggregationType="median")
-plt.imsave('dispMedianAgg11x11_Agg.png', disparityMedianAgg1111)
-plt.imsave('dispMedianAgg11x11_Agg_Comparison.png', appendImages(disparity1111, disparityMedianAgg1111))
+# disparityMedianAgg1111 = disparityMapAggregation(in1, in2, 11, 3, distanceType="SSD", aggregationType="median")
+# plt.imsave('dispMedianAgg11x11_Agg.png', disparityMedianAgg1111)
+# plt.imsave('dispMedianAgg11x11_Agg_Comparison.png', appendImages(disparity1111, disparityMedianAgg1111))
+
+# Imagens de média, N=3, M variando
+disparityMeanAggM3 = disparityMapAggregation(in1, in2, 3, 3, distanceType="SSD", aggregationType="mean")
+plt.imsave('dispMeanAggM3.png', disparityMeanAggM3)
+
+disparityMeanAggM5 = disparityMapAggregation(in1, in2, 3, 5, distanceType="SSD", aggregationType="mean")
+plt.imsave('dispMeanAggM5.png', disparityMeanAggM5)
+
+disparityMeanAggM7 = disparityMapAggregation(in1, in2, 3, 7, distanceType="SSD", aggregationType="mean")
+plt.imsave('dispMeanAggM7.png', disparityMeanAggM7)
+
+disparityMeanAggM11 = disparityMapAggregation(in1, in2, 3, 11, distanceType="SSD", aggregationType="mean")
+plt.imsave('dispMeanAggM11.png', disparityMeanAggM11)

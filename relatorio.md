@@ -14,4 +14,14 @@ Foi usada a distância soma dos mínimos quadrados no espaço de cores L\*a\*b\*
 
 ![LAB_Comparison_Full](C:\Users\Marcos\Desktop\facul\visao\T2\LAB_Comparison_Full.png)
 
-As diferenças não são facilmente perceptíveis ao compararmos os resultados lado a lado, por isso gifs comparativos podem ser encontrados em [github.com/mswlandi/stereoAssignment/blob/master/gifs.md](github.com/mswlandi/stereoAssignment/blob/master/gifs.md).
+As diferenças não são facilmente perceptíveis ao compararmos os resultados lado a lado, por isso gifs comparativos podem ser encontrados em [github.com/mswlandi/stereoAssignment/blob/master/gifSources/gifs.md](github.com/mswlandi/stereoAssignment/blob/master/gifSources/gifs.md).
+
+## 2
+
+### Média
+
+![dispMeanAgg_Comparison_Full](C:\Users\Marcos\Desktop\facul\visao\stereoAssignment\dispMeanAgg_Comparison_Full.png)
+
+### Mediana
+
+![dispMedianAgg_Comparison_Full](C:\Users\Marcos\Desktop\facul\visao\stereoAssignment\dispMedianAgg_Comparison_Full.png)

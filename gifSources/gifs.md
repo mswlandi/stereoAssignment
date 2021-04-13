@@ -1,4 +1,4 @@
-# Gifs comparativos usando soma das distâncias quadradas: BGR vs L*a*b*
+# Gifs comparativos usando soma das distâncias quadradas: BGR vs L\*a\*b\*
 
 ## 1x1
 ![1x1](1x1.gif)
