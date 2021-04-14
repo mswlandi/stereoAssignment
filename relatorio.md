@@ -18,10 +18,31 @@ As diferenças não são facilmente perceptíveis ao compararmos os resultados l
 
 ## 2
 
-### Média
+Variando N e mantendo M=3, com a coluna da esquerda sendo as referências que não usam processos de agregação:
+
+- Média:
 
 ![dispMeanAgg_Comparison_Full](C:\Users\Marcos\Desktop\facul\visao\stereoAssignment\dispMeanAgg_Comparison_Full.png)
 
-### Mediana
+- Mediana:
 
 ![dispMedianAgg_Comparison_Full](C:\Users\Marcos\Desktop\facul\visao\stereoAssignment\dispMedianAgg_Comparison_Full.png)
+
+A maior melhora se nota quando N=1, diminuindo o ruído drasticamente, com pouca perda de detalhe. Quando N é alto, como quando N=11, não há muitas mudanças.
+
+Agora variando M e mantendo N=3:
+
+- Média:
+
+![dispMeanAgg_M_Comparison](C:\Users\Marcos\Desktop\facul\visao\stereoAssignment\dispMeanAgg_M_Comparison.png)
+
+- Mediana:
+
+![dispMedianAgg_M_Comparison](C:\Users\Marcos\Desktop\facul\visao\stereoAssignment\dispMedianAgg_M_Comparison.png)
+
+Nota-se uma redução no ruído e redução de detalhes com o aumento de M, assim como com o aumento de N.
+
+Alguns artefatos são comuns em todos os resultados:
+
+- Faixa com ruído à esquerda: Isso se dá pois o deslocamento é calculado da imagem que foi tirada mais à esquerda para a que foi tirada mais à direita, então uma parte da imagem da esquerda não aparece na imagem da direita.
+- Ruído à esquerda das bordas dos objetos: De forma semelhante, algumas partes do cenário estão escondidas na imagem da direita, então falta informação para detectar o deslocamento dos pixels correspondentes a estas partes do cenário

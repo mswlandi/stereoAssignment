@@ -140,54 +140,54 @@ def appendImages(img1, img2):
 # Gera imagens para a primeira parte (a) do exercício 1
 in1 = cv2.imread('im2.png')
 in2 = cv2.imread('im6.png')
-disp1 = cv2.imread('disp2.png')
-disp2 = cv2.imread('disp6.png')
+# disp1 = cv2.imread('disp2.png')
+# disp2 = cv2.imread('disp6.png')
 
-fig = plt.figure(figsize=(15, 20), dpi=80)
-ax = fig.add_subplot(3, 2, 1)
-ax.title.set_text('Original')
-ax.axis('off')
-plt.imshow(in1[..., ::-1])
+# fig = plt.figure(figsize=(15, 20), dpi=80)
+# ax = fig.add_subplot(3, 2, 1)
+# ax.title.set_text('Original')
+# ax.axis('off')
+# plt.imshow(in1[..., ::-1])
 
-ax = fig.add_subplot(3, 2, 2)
-ax.title.set_text('Ground Truth')
-ax.axis('off')
-plt.imshow(disp1[...,::-1])
+# ax = fig.add_subplot(3, 2, 2)
+# ax.title.set_text('Ground Truth')
+# ax.axis('off')
+# plt.imshow(disp1[...,::-1])
 
-disparity11 = disparityMap(in1, in2, 1)
-plt.imsave('dispSSD1x1.png', disparity11)
+# disparity11 = disparityMap(in1, in2, 1)
+# plt.imsave('dispSSD1x1.png', disparity11)
 
-ax = fig.add_subplot(3, 2, 3)
-ax.title.set_text('Neighbourhood = 1x1')
-ax.axis('off')
-plt.imshow(disparity11[...,::-1])
+# ax = fig.add_subplot(3, 2, 3)
+# ax.title.set_text('Neighbourhood = 1x1')
+# ax.axis('off')
+# plt.imshow(disparity11[...,::-1])
 
-disparity33 = disparityMap(in1, in2, 3)
-plt.imsave('dispSSD3x3.png', disparity33)
+# disparity33 = disparityMap(in1, in2, 3)
+# plt.imsave('dispSSD3x3.png', disparity33)
 
-ax = fig.add_subplot(3, 2, 4)
-ax.title.set_text('Neighbourhood = 3x3')
-ax.axis('off')
-plt.imshow(disparity33[..., ::-1])
+# ax = fig.add_subplot(3, 2, 4)
+# ax.title.set_text('Neighbourhood = 3x3')
+# ax.axis('off')
+# plt.imshow(disparity33[..., ::-1])
 
-disparity55 = disparityMap(in1, in2, 5)
-plt.imsave('dispSSD5x5.png', disparity55)
+# disparity55 = disparityMap(in1, in2, 5)
+# plt.imsave('dispSSD5x5.png', disparity55)
 
-ax = fig.add_subplot(3, 2, 5)
-ax.title.set_text('Neighbourhood = 5x5')
-ax.axis('off')
-plt.imshow(disparity55[..., ::-1])
+# ax = fig.add_subplot(3, 2, 5)
+# ax.title.set_text('Neighbourhood = 5x5')
+# ax.axis('off')
+# plt.imshow(disparity55[..., ::-1])
 
-disparity1111 = disparityMap(in1, in2, 11)
-plt.imsave('dispSSD11x11.png', disparity1111)
+# disparity1111 = disparityMap(in1, in2, 11)
+# plt.imsave('dispSSD11x11.png', disparity1111)
 
-ax = fig.add_subplot(3, 2, 6)
-ax.title.set_text('Neighbourhood = 11x11')
-ax.axis('off')
-plt.imshow(disparity1111[..., ::-1])
+# ax = fig.add_subplot(3, 2, 6)
+# ax.title.set_text('Neighbourhood = 11x11')
+# ax.axis('off')
+# plt.imshow(disparity1111[..., ::-1])
 
-fig.tight_layout(h_pad=1.5, w_pad=1.0)
-fig.savefig('dispSSDfull.png')
+# fig.tight_layout(h_pad=1.5, w_pad=1.0)
+# fig.savefig('dispSSDfull.png')
 
 
 # Gera imagens para a segunda parte (b) do exercício 1
@@ -257,3 +257,16 @@ plt.imsave('dispMeanAggM7.png', disparityMeanAggM7)
 
 disparityMeanAggM11 = disparityMapAggregation(in1, in2, 3, 11, distanceType="SSD", aggregationType="mean")
 plt.imsave('dispMeanAggM11.png', disparityMeanAggM11)
+
+# Imagens de mediana, N=3, M variando
+disparityMedianAggM3 = disparityMapAggregation(in1, in2, 3, 3, distanceType="SSD", aggregationType="median")
+plt.imsave('dispMedianAggM3.png', disparityMedianAggM3)
+
+disparityMedianAggM5 = disparityMapAggregation(in1, in2, 3, 5, distanceType="SSD", aggregationType="median")
+plt.imsave('dispMedianAggM5.png', disparityMedianAggM5)
+
+disparityMedianAggM7 = disparityMapAggregation(in1, in2, 3, 7, distanceType="SSD", aggregationType="median")
+plt.imsave('dispMedianAggM7.png', disparityMedianAggM7)
+
+disparityMedianAggM11 = disparityMapAggregation(in1, in2, 3, 11, distanceType="SSD", aggregationType="median")
+plt.imsave('dispMedianAggM11.png', disparityMedianAggM11)
